@@ -1,0 +1,10 @@
+name: workflow-1
+on: workflow_dispatch
+jobs:
+  job-1:
+    runs-on: uubuntu-latest
+    steps:
+      - name: github action start
+        run: echo "This is start of first workflow in github action"
+      - name: hello github end
+        run: echo "This is end of first workflow in github action"
