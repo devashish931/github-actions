@@ -1,5 +1,9 @@
 name: Validate Files
-on: push
+on:
+  workflow_run:
+    workflows: [workflow-1]
+    types:
+      - completed
 jobs:
   validate-html:
     runs-on: ubuntu-latest
