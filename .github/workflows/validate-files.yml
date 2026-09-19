@@ -10,3 +10,5 @@ jobs:
         run: test -f inde.html
       - name: check js file
         run: test -f script.js
+      - name: test js file
+        run: node --check script.js
