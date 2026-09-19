@@ -25,4 +25,4 @@ jobs:
       - name: test js file
         run: node --check script.js
       - name: test html file
-        run: nps htmlhint index.html
+        run: npx htmlhint index.html
