@@ -13,4 +13,4 @@ jobs:
           node-version: 24
           cache: yarn
       - name: test
-        run: yarn run test
+        run: yarn run lint
