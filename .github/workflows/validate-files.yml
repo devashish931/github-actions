@@ -12,3 +12,7 @@ jobs:
         run: test -f script.js
       - name: test js file
         run: node --check script.js
+      - name: Install stylelint
+        run: npm install --no-save stylelint stylelint-config-standard
+      - name: validate css file
+        run: npx stylelint style.css
