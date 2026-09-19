@@ -15,3 +15,5 @@ jobs:
         run: echo "This is step 1 of job 2"
       - name: step-2
         run: echo "This is step 2 of job 2"
+      - name: fail this job
+        run: exit 1
