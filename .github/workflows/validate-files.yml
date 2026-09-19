@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code on VM
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: check html file
-        run: test -f index.html
+        run: test -f inde.html
       - name: check js file
         run: test -f script.js
