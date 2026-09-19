@@ -6,6 +6,7 @@ function App() {
     <>
       <section id="center">
         <h1>This is React App</h1>
+        <h2>This is test text</h2>
       </section>
      
     </>

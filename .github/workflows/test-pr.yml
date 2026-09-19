@@ -9,8 +9,12 @@ jobs:
     steps:
       - name: pull code
         uses: actions/checkout@v6
+      - name: Setup node
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: yarn
+      - name: Install dependencies
+        run: yarn install --immutable
       - name: test
         run: yarn run test
