@@ -7,7 +7,7 @@ jobs:
       - name: Get code on VM
         uses: actions/checkout@v6
       - name: check html file
-        run: test -f inde.html
+        run: test -f index.html
       - name: check js file
         run: test -f script.js
       - name: test js file
