@@ -1,16 +1,28 @@
 name: Validate Files
 on: push
 jobs:
-  validate:
+  validate-html:
     runs-on: ubuntu-latest
     steps:
       - name: Get code on VM
         uses: actions/checkout@v6
       - name: check html file
         run: test -f index.html
+
+  validate-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code on VM
+        uses: actions/checkout@v6
       - name: check js file
         run: test -f script.js
+  validate-code:
+    needs: [validate-html, validate-js]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code on VM
+        uses: actions/checkout@v6
       - name: test js file
         run: node --check script.js
-      - name: validate css file
-        run: npx --yes stylelint style.css
+      - name: test html file
+        run: nps htmlhint index.html
